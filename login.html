@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Perpustakaan Digital</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="assets/img/logo.png" alt="Logo Perpustakaan" class="logo">
+                <h2>Perpustakaan</h2>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="katalog.html">Katalog</a></li>
+                    <li><a href="daftar.html">Pendaftaran</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="bantuan.html">Bantuan</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                    <li><a href="login.html" class="active">Login</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-profile">
+                <img src="assets/img/user.jpg" alt="User">
+                <div>
+                    <h4>Pengunjung</h4>
+                    <p>Tamu</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section class="login-section">
+                <h1>Login Anggota</h1>
+                <form action="#" method="POST" class="login-form">
+                    <label for="username">Email / Username</label>
+                    <input type="text" id="username" name="username" placeholder="Masukkan email atau username"
+                        required>
+
+                    <label for="password">Kata Sandi</label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" required>
+
+                    <button type="submit" class="btn-primary">Masuk</button>
+
+                    <p class="login-note">Belum punya akun? <a href="daftar.html">Daftar di sini</a></p>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

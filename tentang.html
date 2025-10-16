@@ -9,83 +9,94 @@
 </head>
 
 <body>
-    <header id="tentang-header">
-        <h1 class="tentang-logo">Perpustakaan Digital UNS</h1>
-        <nav class="tentang-nav">
-            <a href="index.html">Beranda</a>
-            <a href="katalog.html">Katalog</a>
-            <a href="tentang.html" class="active">Tentang</a>
-            <a href="kontak.html">Kontak</a>
-            <a href="login.html">Login</a>
-        </nav>
-    </header>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="assets/img/logo.png" alt="Logo Perpustakaan" class="logo">
+                <h2>Perpustakaan</h2>
+            </div>
 
-    <main id="tentang-main">
-        <section class="tentang-intro">
-            <h2 class="tentang-judul">Tentang Kami</h2>
-            <div class="tentang-divider"></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="katalog.html">Katalog</a></li>
+                    <li><a href="daftar.html">Pendaftaran</a></li>
+                    <li><a href="tentang.html" class="active">Tentang Kami</a></li>
+                    <li><a href="bantuan.html">Bantuan</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
 
-            <p class="tentang-paragraf">
-                Perpustakaan Digital UNS merupakan platform berbasis web yang dirancang untuk memberikan kemudahan akses
-                terhadap koleksi buku, jurnal, dan literatur akademik secara daring.
-                Kami hadir untuk mendukung kegiatan belajar, penelitian, dan pengembangan ilmu pengetahuan di lingkungan
-                Universitas Sebelas Maret.
-            </p>
-
-            <p class="tentang-paragraf">
-                Dengan teknologi digital terkini, pengguna dapat mencari, membaca, dan meminjam buku dengan cepat tanpa
-                batas ruang dan waktu.
-                Sistem kami juga dilengkapi dengan fitur manajemen data pustaka, laporan statistik peminjaman, dan
-                layanan pengguna yang ramah.
-            </p>
-        </section>
-
-        <section class="tentang-visi-misi">
-            <h3 class="tentang-subjudul">Visi</h3>
-            <p class="tentang-paragraf">
-                Menjadi pusat literasi digital unggulan yang mendukung pembelajaran dan penelitian berbasis teknologi
-                informasi di Indonesia.
-            </p>
-
-            <h3 class="tentang-subjudul">Misi</h3>
-            <ul class="tentang-list">
-                <li>Menyediakan koleksi digital yang lengkap dan berkualitas.</li>
-                <li>Meningkatkan layanan perpustakaan melalui sistem daring yang efisien.</li>
-                <li>Mendorong budaya membaca di kalangan mahasiswa dan masyarakat.</li>
-                <li>Mendukung pengembangan riset dan publikasi ilmiah melalui akses terbuka.</li>
-            </ul>
-        </section>
-
-        <section class="tentang-tim">
-            <h3 class="tentang-subjudul" style="text-align:center;">Tim Pengembang</h3>
-            <div class="tentang-tim-grid">
-                <div class="tentang-anggota">
-                    <img src="https://i.ibb.co/ZM0Gx8D/avatar1.png" alt="Tim 1">
-                    <h4>Hafidz Alif</h4>
-                    <p>Web Developer</p>
-                </div>
-                <div class="tentang-anggota">
-                    <img src="https://i.ibb.co/GvH8k8y/avatar2.png" alt="Tim 2">
-                    <h4>Dimas Rahman</h4>
-                    <p>UI/UX Designer</p>
-                </div>
-                <div class="tentang-anggota">
-                    <img src="https://i.ibb.co/Qf4TZWh/avatar3.png" alt="Tim 3">
-                    <h4>Aulia Salsabila</h4>
-                    <p>Content Manager</p>
-                </div>
-                <div class="tentang-anggota">
-                    <img src="https://i.ibb.co/2cVWdV2/avatar4.png" alt="Tim 4">
-                    <h4>Rizky Ramadhan</h4>
-                    <p>Database Engineer</p>
+            <div class="user-profile">
+                <img src="assets/img/user.jpg" alt="User">
+                <div>
+                    <h4>Pengunjung</h4>
+                    <p>Tamu</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </aside>
 
-    <footer id="tentang-footer">
-        <p>© 2025 Perpustakaan Digital UNS. Semua hak cipta dilindungi.</p>
-    </footer>
+        <!-- Konten utama -->
+        <main class="content tentang-content">
+            <section class="tentang-intro">
+                <h1 class="tentang-title">Tentang Kami</h1>
+                <p class="tentang-text">
+                    <strong>Perpustakaan Digital UNS</strong> adalah pusat literasi berbasis teknologi yang menyediakan
+                    berbagai koleksi buku,
+                    jurnal, dan referensi ilmiah digital. Kami berkomitmen untuk mendukung kegiatan belajar, mengajar,
+                    serta penelitian bagi
+                    mahasiswa, dosen, dan masyarakat umum.
+                </p>
+                <p class="tentang-text">
+                    Berdiri sejak tahun 2000, perpustakaan ini terus berkembang dengan inovasi layanan dan sistem akses
+                    yang efisien serta ramah pengguna.
+                </p>
+            </section>
+
+            <section class="tentang-mission">
+                <h2>Visi & Misi</h2>
+                <ul>
+                    <li>Meningkatkan budaya literasi masyarakat kampus dan publik.</li>
+                    <li>Menyediakan akses informasi yang cepat, mudah, dan relevan.</li>
+                    <li>Menjadi pusat referensi ilmu pengetahuan berbasis digital di Indonesia.</li>
+                </ul>
+            </section>
+
+            <section class="tentang-team">
+                <h2>Tim Pengembang Website</h2>
+                <p class="tentang-team-desc">Website ini dikembangkan oleh tim mahasiswa UNS yang berfokus pada
+                    pengembangan sistem informasi modern dan ramah pengguna.</p>
+
+                <div class="tentang-team-grid">
+                    <div class="tentang-team-member">
+                        <img src="assets/img/team/member1.jpg" alt="Foto Anggota 1">
+                        <h3>Hafidz Alif</h3>
+                        <p>Frontend Developer</p>
+                    </div>
+
+                    <div class="tentang-team-member">
+                        <img src="assets/img/team/member2.jpg" alt="Foto Anggota 2">
+                        <h3>Rizky Ananda</h3>
+                        <p>Backend Developer</p>
+                    </div>
+
+                    <div class="tentang-team-member">
+                        <img src="assets/img/team/member3.jpg" alt="Foto Anggota 3">
+                        <h3>Siti Rahma</h3>
+                        <p>UI/UX Designer</p>
+                    </div>
+
+                    <div class="tentang-team-member">
+                        <img src="assets/img/team/member4.jpg" alt="Foto Anggota 4">
+                        <h3>Dimas Pratama</h3>
+                        <p>Database Engineer</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>

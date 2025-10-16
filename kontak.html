@@ -4,77 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak | Perpustakaan Digital UNS</title>
+    <title>Kontak Kami | Perpustakaan Digital</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <!-- ======== HEADER ======== -->
-    <header id="kontak-header">
-        <h1 class="kontak-logo">Perpustakaan Digital UNS</h1>
-        <nav class="kontak-nav">
-            <a href="index.html">Beranda</a>
-            <a href="katalog.html">Katalog</a>
-            <a href="tentang.html">Tentang</a>
-            <a href="bantuan.html">Bantuan</a>
-            <a href="kontak.html" class="active">Kontak</a>
-            <a href="login.html">Login</a>
-        </nav>
-    </header>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="assets/img/logo.png" alt="Logo Perpustakaan" class="logo">
+                <h2>Perpustakaan</h2>
+            </div>
 
-    <!-- ======== MAIN CONTENT ======== -->
-    <main id="kontak-main">
-        <section class="kontak-intro">
-            <h2 class="kontak-title">Hubungi Kami</h2>
-            <div class="kontak-divider"></div>
-            <p class="kontak-paragraf">
-                Jika Anda memiliki pertanyaan, saran, atau keluhan, silakan hubungi kami melalui formulir berikut atau
-                datang langsung ke perpustakaan.
-            </p>
-        </section>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="katalog.html">Katalog</a></li>
+                    <li><a href="daftar.html">Pendaftaran</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="bantuan.html">Bantuan</a></li>
+                    <li><a href="kontak.html" class="active">Kontak</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
 
-        <section class="kontak-container">
-            <!-- FORM KONTAK -->
-            <div class="kontak-form">
-                <h3>Kirim Pesan</h3>
-                <form action="#" method="POST">
-                    <label for="nama">Nama Lengkap</label>
-                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama Anda">
+            <div class="user-profile">
+                <img src="assets/img/user.jpg" alt="User">
+                <div>
+                    <h4>Pengunjung</h4>
+                    <p>Tamu</p>
+                </div>
+            </div>
+        </aside>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="Masukkan email aktif">
+        <!-- Konten utama -->
+        <main class="content">
+            <section class="kontak-section">
+                <h1>Hubungi Kami</h1>
+                <p class="kontak-subtitle">
+                    Ada pertanyaan, saran, atau kendala? Silakan kirim pesan melalui formulir di bawah ini.
+                </p>
 
-                    <label for="pesan">Pesan</label>
-                    <textarea id="pesan" name="pesan" rows="5" required
-                        placeholder="Tulis pesan Anda di sini..."></textarea>
+                <form class="kontak-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+                    </div>
 
-                    <button type="submit" class="kontak-btn">Kirim Pesan</button>
+                    <div class="form-group">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subjek">Subjek</label>
+                        <input type="text" id="subjek" name="subjek" placeholder="Tuliskan subjek pesan" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <textarea id="pesan" name="pesan" placeholder="Tuliskan pesan Anda..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Kirim Pesan</button>
                 </form>
-            </div>
 
-            <!-- INFORMASI KONTAK -->
-            <div class="kontak-info">
-                <h3>Informasi Perpustakaan</h3>
-                <p><strong>Alamat:</strong><br>
-                    Jl. Ir. Sutami No.36A, Kentingan, Jebres, Surakarta, Jawa Tengah 57126
-                </p>
-                <p><strong>Email:</strong><br>
-                    perpustakaan@uns.ac.id
-                </p>
-                <p><strong>Telepon:</strong><br>
-                    (0271) 646994
-                </p>
-                <p><strong>Jam Operasional:</strong><br>
-                    Senin - Jumat: 08.00 - 16.00 WIB
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <!-- ======== FOOTER ======== -->
-    <footer id="kontak-footer">
-        <p>© 2025 Perpustakaan Digital UNS. Semua hak cipta dilindungi.</p>
-    </footer>
+                <div class="kontak-info">
+                    <h2>Informasi Kontak</h2>
+                    <p><strong>Alamat:</strong> Jl. Ir. Sutami No.36, Surakarta</p>
+                    <p><strong>Email:</strong> perpustakaan@uns.ac.id</p>
+                    <p><strong>Telepon:</strong> (0271) 123456</p>
+                    <p><strong>Jam Layanan:</strong> Senin - Jumat, 08.00 - 16.00 WIB</p>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>
