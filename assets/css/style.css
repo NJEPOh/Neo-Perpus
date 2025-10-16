@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    background-color: #f7f8fc;
+    color: #222;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+    width: 250px;
+    background: #0f1b2d;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.profile {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.menu {
+    padding: 0 20px;
+    overflow-y: auto;
+}
+
+.menu h4 {
+    margin: 15px 0 5px;
+    font-size: 13px;
+    color: #7c8dad;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #1db954;
+}
+
+.bottom-profile {
+    background: #0a1322;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bottom-profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.bottom-profile p {
+    font-size: 13px;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+    flex: 1;
+}
+
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.topbar input {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    width: 250px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 10px 15px;
+}
+
+.card-info h3 {
+    font-size: 15px;
+    margin-bottom: 3px;
+    color: #111;
+}
+
+.card-info p {
+    color: #666;
+    font-size: 13px;
+}
+
+/* Smaller cards */
+.card-grid.small img {
+    height: 120px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .topbar {
+        justify-content: center;
+    }
+}

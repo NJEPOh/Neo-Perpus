@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Buku - Admin</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Tambah Buku Baru</h2>
+
+        <form id="formBuku" action="../api/buku/create.php" method="POST" enctype="multipart/form-data">
+            <label>Judul Buku:</label>
+            <input type="text" name="judul" required>
+
+            <label>Penulis:</label>
+            <input type="text" name="penulis" required>
+
+            <label>Penerbit:</label>
+            <input type="text" name="penerbit">
+
+            <label>Tahun Terbit:</label>
+            <input type="number" name="tahun_terbit">
+
+            <label>Deskripsi:</label>
+            <textarea name="deskripsi" rows="4"></textarea>
+
+            <label>Upload Cover Buku (JPG/PNG):</label>
+            <input type="file" name="cover" accept=".jpg,.jpeg,.png" required>
+
+            <label>Upload File Buku (PDF):</label>
+            <input type="file" name="file_pdf" accept=".pdf" required>
+
+            <button type="submit">Simpan Buku</button>
+        </form>
+    </div>
+</body>
+
+</html>

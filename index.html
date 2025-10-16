@@ -1,0 +1,107 @@
+<?php include 'api/koneksi.php'; ?>
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Perpustakaan Digital</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="assets/img/profile.jpg" alt="Admin Perpustakaan">
+            <h3>Admin Perpustakaan</h3>
+            <p>UNS Digital Library</p>
+        </div>
+
+        <nav class="menu">
+            <h4>Menu Utama</h4>
+            <ul>
+                <li><a href="index.php">Beranda</a></li>
+                <li><a href="katalog.php">Katalog Buku</a></li>
+                <li><a href="daftar.php">Pendaftaran Anggota</a></li>
+                <li><a href="tentang.php">Tentang Kami</a></li>
+                <li><a href="bantuan.php">Bantuan / FAQ</a></li>
+                <li><a href="kontak.php">Hubungi Kami</a></li>
+            </ul>
+
+            <h4>Kategori Buku</h4>
+            <ul>
+                <li><a href="#">Teknologi</a></li>
+                <li><a href="#">Filsafat</a></li>
+                <li><a href="#">Sastra</a></li>
+                <li><a href="#">Agama</a></li>
+                <li><a href="#">Umum</a></li>
+            </ul>
+        </nav>
+
+        <div class="bottom-profile">
+            <img src="assets/img/logo.png" alt="">
+            <p>Perpustakaan UNS</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <input type="text" placeholder="Cari buku...">
+        </header>
+
+        <!-- Buku Terbaru -->
+        <section class="section">
+            <h2>Buku Terbaru</h2>
+            <div class="card-grid">
+                <?php
+        $query = mysqli_query($conn, "SELECT * FROM buku ORDER BY tanggal_input DESC LIMIT 6");
+        if (mysqli_num_rows($query) > 0) {
+            while ($row = mysqli_fetch_assoc($query)) {
+            echo '
+            <div class="card">
+                <img src="uploads/cover_buku/' . $row['cover'] . '" alt="">
+                <div class="card-info">
+                <h3>' . htmlspecialchars($row['judul']) . '</h3>
+                <p>oleh ' . htmlspecialchars($row['pengarang']) . '</p>
+                </div>
+            </div>';
+            }
+        } else {
+            echo "<p>Belum ada buku yang ditambahkan.</p>";
+        }
+        ?>
+            </div>
+        </section>
+
+        <!-- Rekomendasi -->
+        <section class="section">
+            <h2>Rekomendasi untuk Anda</h2>
+            <div class="card-grid small">
+                <?php
+        $query2 = mysqli_query($conn, "SELECT * FROM buku ORDER BY RAND() LIMIT 6");
+        if (mysqli_num_rows($query2) > 0) {
+            while ($row = mysqli_fetch_assoc($query2)) {
+            echo '
+            <div class="card">
+                <img src="uploads/cover_buku/' . $row['cover'] . '" alt="">
+                <div class="card-info">
+                <h3>' . htmlspecialchars($row['judul']) . '</h3>
+                <p>oleh ' . htmlspecialchars($row['pengarang']) . '</p>
+                </div>
+            </div>';
+            }
+        } else {
+            echo "<p>Tidak ada rekomendasi tersedia.</p>";
+        }
+        ?>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
