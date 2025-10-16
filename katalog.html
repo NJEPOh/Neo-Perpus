@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku | Perpustakaan Digital</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="assets/img/logo.png" alt="Logo Perpustakaan" class="logo">
+                <h2>Perpustakaan</h2>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">🏠 Beranda</a></li>
+                    <li><a href="katalog.html" class="active">📚 Katalog</a></li>
+                    <li><a href="daftar.html">📝 Pendaftaran</a></li>
+                    <li><a href="tentang.html">ℹ️ Tentang Kami</a></li>
+                    <li><a href="bantuan.html">❓ Bantuan</a></li>
+                    <li><a href="kontak.html">☎️ Kontak</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-profile">
+                <img src="assets/img/user.jpg" alt="User">
+                <div>
+                    <h4>Pengunjung</h4>
+                    <p>Tamu</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Konten utama -->
+        <main class="content">
+            <header class="search-bar">
+                <input type="text" placeholder="Cari buku berdasarkan judul, penulis, atau kategori...">
+            </header>
+
+            <section class="filter-bar">
+                <div class="filter-group">
+                    <label for="kategori">Kategori:</label>
+                    <select id="kategori">
+                        <option>Semua</option>
+                        <option>Novel</option>
+                        <option>Biografi</option>
+                        <option>Ilmu Pengetahuan</option>
+                        <option>Agama</option>
+                        <option>Teknologi</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sort">Urutkan:</label>
+                    <select id="sort">
+                        <option>Terbaru</option>
+                        <option>Terpopuler</option>
+                        <option>Abjad A-Z</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="book-section">
+                <h2>Daftar Buku</h2>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <img src="assets/img/cover/laskar_pelangi.jpg" alt="Laskar Pelangi">
+                        <h3>Laskar Pelangi</h3>
+                        <p>Andrea Hirata</p>
+                    </div>
+
+                    <div class="book-card">
+                        <img src="assets/img/cover/bumi_manusia.jpg" alt="Bumi Manusia">
+                        <h3>Bumi Manusia</h3>
+                        <p>Pramoedya A. Toer</p>
+                    </div>
+
+                    <div class="book-card">
+                        <img src="assets/img/cover/negri_5_menara.jpg" alt="Negeri 5 Menara">
+                        <h3>Negeri 5 Menara</h3>
+                        <p>Ahmad Fuadi</p>
+                    </div>
+
+                    <div class="book-card">
+                        <img src="assets/img/cover/sang_pemimpi.jpg" alt="Sang Pemimpi">
+                        <h3>Sang Pemimpi</h3>
+                        <p>Andrea Hirata</p>
+                    </div>
+
+                    <div class="book-card">
+                        <img src="assets/img/cover/habibie_ainun.jpg" alt="Habibie & Ainun">
+                        <h3>Habibie & Ainun</h3>
+                        <p>B. J. Habibie</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>
