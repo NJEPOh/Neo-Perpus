@@ -2,10 +2,10 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Buku - Admin</title>
-    <link rel="stylesheet" href="../../assets/css/admin-style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tambah Anggota - Admin</title>
+    <link rel="stylesheet" href="../../assets/css/admin-style.css" />
 </head>
 
 <body>
@@ -15,8 +15,8 @@
             <h2 class="admin-logo">Admin</h2>
             <nav class="admin-nav">
                 <a href="../dashboard.html">Dashboard</a>
-                <a href="index.html" class="active">Katalog Buku</a>
-                <a href="../anggota/index.html">Data Anggota</a>
+                <a href="../katalog/index.html">Katalog Buku</a>
+                <a href="../anggota/index.html" class="active">Data Anggota</a>
                 <a href="../sirkulasi/index.html">Sirkulasi</a>
                 <a href="../denda/index.html">Denda</a>
                 <a href="../laporan/peminjaman.html">Laporan</a>
@@ -27,70 +27,66 @@
             </div>
         </aside>
 
-        <!-- Main Content -->
+        <!-- Main -->
         <main class="admin-main">
             <header class="admin-header">
-                <h1>Tambah Buku Baru</h1>
-                <p>Isi formulir berikut untuk menambahkan buku ke katalog perpustakaan.</p>
+                <h1>Tambah Anggota</h1>
+                <p>Tambahkan data anggota baru ke sistem perpustakaan.</p>
             </header>
 
             <section class="admin-form-section">
-                <form action="#" method="post" class="admin-form">
+                <form class="admin-form" action="#" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="judul">Judul Buku</label>
-                        <input type="text" id="judul" name="judul" placeholder="Masukkan judul buku" required>
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="penulis">Penulis</label>
-                        <input type="text" id="penulis" name="penulis" placeholder="Masukkan nama penulis" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="penerbit">Penerbit</label>
-                        <input type="text" id="penerbit" name="penerbit" placeholder="Masukkan penerbit buku" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tahun">Tahun Terbit</label>
-                        <input type="number" id="tahun" name="tahun" min="1900" max="2025" required>
+                        <label for="nomor">Nomor Anggota</label>
+                        <input type="text" id="nomor" name="nomor" placeholder="Contoh: AGT001" required>
                     </div>
 
                     <div class="form-group">
                         <label for="kategori">Kategori</label>
                         <select id="kategori" name="kategori" required>
                             <option value="">-- Pilih Kategori --</option>
-                            <option value="fiksi">Fiksi</option>
-                            <option value="non-fiksi">Non-Fiksi</option>
-                            <option value="pendidikan">Pendidikan</option>
-                            <option value="teknologi">Teknologi</option>
-                            <option value="agama">Agama</option>
+                            <option value="mahasiswa">Mahasiswa</option>
+                            <option value="dosen">Dosen</option>
+                            <option value="umum">Umum</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="isbn">ISBN</label>
-                        <input type="text" id="isbn" name="isbn" placeholder="Masukkan nomor ISBN" required>
+                        <label for="telepon">Nomor Telepon</label>
+                        <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx">
                     </div>
 
                     <div class="form-group">
-                        <label for="stok">Jumlah Stok</label>
-                        <input type="number" id="stok" name="stok" min="1" required>
+                        <label for="alamat">Alamat</label>
+                        <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label for="deskripsi">Deskripsi</label>
-                        <textarea id="deskripsi" name="deskripsi" rows="4"
-                            placeholder="Tuliskan deskripsi buku..."></textarea>
+                        <label for="status">Status Keanggotaan</label>
+                        <select id="status" name="status" required>
+                            <option value="aktif">Aktif</option>
+                            <option value="nonaktif">Nonaktif</option>
+                            <option value="diblokir">Diblokir</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="cover">Upload Sampul Buku</label>
-                        <input type="file" id="cover" name="cover" accept="image/*">
+                        <label for="avatar">Foto Anggota (opsional)</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/*">
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="btn-primary">Simpan</button>
+                        <button type="submit" class="btn-primary">Simpan Anggota</button>
                         <a href="index.html" class="btn-secondary">Batal</a>
                     </div>
                 </form>

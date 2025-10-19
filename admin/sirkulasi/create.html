@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Peminjaman - Admin</title>
+    <link rel="stylesheet" href="../../assets/css/admin-style.css">
+</head>
+
+<body>
+    <div class="sirkulasi-create-container">
+        <!-- Sidebar -->
+        <aside class="sirkulasi-create-sidebar">
+            <h2 class="sirkulasi-create-logo">Admin</h2>
+            <nav class="sirkulasi-create-nav">
+                <a href="../dashboard.html">Dashboard</a>
+                <a href="../katalog/index.html">Katalog Buku</a>
+                <a href="../anggota/index.html">Data Anggota</a>
+                <a href="index.html" class="active">Sirkulasi</a>
+                <a href="../denda/index.html">Denda</a>
+                <a href="../laporan/peminjaman.html">Laporan</a>
+                <a href="../pengguna/index.html">Staf/Admin</a>
+            </nav>
+            <div class="sirkulasi-create-logout">
+                <a href="../../login.html">Keluar</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="sirkulasi-create-main">
+            <header class="sirkulasi-create-header">
+                <h1>Tambah Peminjaman</h1>
+                <p>Isi data peminjaman buku oleh anggota.</p>
+            </header>
+
+            <section class="sirkulasi-create-form-section">
+                <form class="sirkulasi-create-form">
+                    <div class="sirkulasi-create-form-group">
+                        <label for="namaAnggota">Nama Anggota</label>
+                        <input type="text" id="namaAnggota" name="namaAnggota" placeholder="Masukkan nama anggota"
+                            required>
+                    </div>
+
+                    <div class="sirkulasi-create-form-group">
+                        <label for="judulBuku">Judul Buku</label>
+                        <input type="text" id="judulBuku" name="judulBuku" placeholder="Masukkan judul buku" required>
+                    </div>
+
+                    <div class="sirkulasi-create-form-group">
+                        <label for="tanggalPinjam">Tanggal Pinjam</label>
+                        <input type="date" id="tanggalPinjam" name="tanggalPinjam" required>
+                    </div>
+
+                    <div class="sirkulasi-create-form-group">
+                        <label for="tanggalKembali">Tanggal Kembali</label>
+                        <input type="date" id="tanggalKembali" name="tanggalKembali" required>
+                    </div>
+
+                    <div class="sirkulasi-create-form-group">
+                        <label for="status">Status</label>
+                        <select id="status" name="status">
+                            <option value="Dipinjam">Dipinjam</option>
+                            <option value="Dikembalikan">Dikembalikan</option>
+                        </select>
+                    </div>
+
+                    <div class="sirkulasi-create-form-actions">
+                        <button type="submit" class="sirkulasi-create-btn-submit">Simpan</button>
+                        <a href="index.html" class="sirkulasi-create-btn-cancel">Batal</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

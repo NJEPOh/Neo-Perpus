@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Edit Anggota - Admin</title>
+    <link rel="stylesheet" href="../../assets/css/admin-style.css" />
+</head>
+
+<body>
+    <div class="editanggota-container">
+        <!-- Sidebar -->
+        <aside class="editanggota-sidebar">
+            <h2 class="editanggota-logo">Admin</h2>
+            <nav class="editanggota-nav">
+                <a href="../dashboard.html">Dashboard</a>
+                <a href="../katalog/index.html">Katalog Buku</a>
+                <a href="../anggota/index.html" class="active">Data Anggota</a>
+                <a href="../sirkulasi/index.html">Sirkulasi</a>
+                <a href="../denda/index.html">Denda</a>
+                <a href="../laporan/peminjaman.html">Laporan</a>
+                <a href="../pengguna/index.html">Staf/Admin</a>
+            </nav>
+            <div class="editanggota-logout">
+                <a href="../../login.html">Keluar</a>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="editanggota-main">
+            <header class="editanggota-header">
+                <h1>Edit Data Anggota</h1>
+                <p>Perbarui informasi anggota perpustakaan.</p>
+            </header>
+
+            <section class="editanggota-form-section">
+                <form class="editanggota-form" action="#" method="post" enctype="multipart/form-data">
+                    <div class="editanggota-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" value="Rina Saputri" required>
+                    </div>
+
+                    <div class="editanggota-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="rina@email.com" required>
+                    </div>
+
+                    <div class="editanggota-group">
+                        <label for="nomor">Nomor Anggota</label>
+                        <input type="text" id="nomor" name="nomor" value="AGT002" readonly>
+                    </div>
+
+                    <div class="editanggota-group">
+                        <label for="kategori">Kategori</label>
+                        <select id="kategori" name="kategori" required>
+                            <option value="mahasiswa" selected>Mahasiswa</option>
+                            <option value="dosen">Dosen</option>
+                            <option value="umum">Umum</option>
+                        </select>
+                    </div>
+
+                    <div class="editanggota-group">
+                        <label for="telepon">Nomor Telepon</label>
+                        <input type="tel" id="telepon" name="telepon" value="081234567890">
+                    </div>
+
+                    <div class="editanggota-group">
+                        <label for="alamat">Alamat</label>
+                        <textarea id="alamat" name="alamat" rows="3">Jl. Melati No. 10, Klaten</textarea>
+                    </div>
+
+                    <div class="editanggota-group">
+                        <label for="status">Status Keanggotaan</label>
+                        <select id="status" name="status" required>
+                            <option value="aktif" selected>Aktif</option>
+                            <option value="nonaktif">Nonaktif</option>
+                            <option value="diblokir">Diblokir</option>
+                        </select>
+                    </div>
+
+                    <div class="editanggota-group">
+                        <label>Foto Saat Ini</label>
+                        <img src="../../assets/img/user.jpg" alt="Foto Anggota" class="editanggota-preview">
+                    </div>
+
+                    <div class="editanggota-group">
+                        <label for="avatar">Ganti Foto (opsional)</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/*">
+                    </div>
+
+                    <div class="editanggota-actions">
+                        <button type="submit" class="editanggota-btn-primary">Simpan Perubahan</button>
+                        <a href="index.html" class="editanggota-btn-secondary">Batal</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

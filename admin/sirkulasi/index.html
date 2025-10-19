@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirkulasi - Admin</title>
+    <link rel="stylesheet" href="../../assets/css/admin-style.css">
+</head>
+
+<body>
+    <div class="sirkulasi-container">
+        <!-- Sidebar -->
+        <aside class="sirkulasi-sidebar">
+            <h2 class="sirkulasi-logo">Admin</h2>
+            <nav class="sirkulasi-nav">
+                <a href="../dashboard.html">Dashboard</a>
+                <a href="../katalog/index.html">Katalog Buku</a>
+                <a href="../anggota/index.html">Data Anggota</a>
+                <a href="index.html" class="active">Sirkulasi</a>
+                <a href="../denda/index.html">Denda</a>
+                <a href="../laporan/peminjaman.html">Laporan</a>
+                <a href="../pengguna/index.html">Staf/Admin</a>
+            </nav>
+            <div class="sirkulasi-logout">
+                <a href="../../login.html">Keluar</a>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="sirkulasi-main">
+            <header class="sirkulasi-header">
+                <h1>Data Sirkulasi</h1>
+                <p>Kelola data peminjaman dan pengembalian buku.</p>
+            </header>
+
+            <!-- Tombol Aksi -->
+            <div class="sirkulasi-actions">
+                <a href="create.html" class="sirkulasi-btn-primary">+ Tambah Peminjaman</a>
+                <div class="sirkulasi-search">
+                    <input type="text" placeholder="Cari nama anggota atau judul buku...">
+                    <button class="sirkulasi-btn-search">Cari</button>
+                </div>
+            </div>
+
+            <!-- Tabel Sirkulasi -->
+            <section class="sirkulasi-table-section">
+                <table class="sirkulasi-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Anggota</th>
+                            <th>Judul Buku</th>
+                            <th>Tanggal Pinjam</th>
+                            <th>Tanggal Kembali</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Rina Saputri</td>
+                            <td>Algoritma dan Pemrograman Dasar</td>
+                            <td>2025-10-01</td>
+                            <td>2025-10-08</td>
+                            <td><span class="status success">Dikembalikan</span></td>
+                            <td>
+                                <a href="detail.html" class="sirkulasi-btn-detail">Detail</a>
+                                <a href="#" class="sirkulasi-btn-delete">Hapus</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ahmad Fauzan</td>
+                            <td>Dasar Jaringan Komputer</td>
+                            <td>2025-10-12</td>
+                            <td>2025-10-19</td>
+                            <td><span class="status warning">Dipinjam</span></td>
+                            <td>
+                                <a href="detail.html" class="sirkulasi-btn-detail">Detail</a>
+                                <a href="#" class="sirkulasi-btn-delete">Hapus</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
