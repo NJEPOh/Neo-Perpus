@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Buku - Admin</title>
+    <link rel="stylesheet" href="../../assets/css/admin-style.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <h2 class="admin-logo">Admin</h2>
+            <nav class="admin-nav">
+                <a href="../dashboard.html">Dashboard</a>
+                <a href="index.html" class="active">Katalog Buku</a>
+                <a href="../anggota/index.html">Data Anggota</a>
+                <a href="../sirkulasi/index.html">Sirkulasi</a>
+                <a href="../denda/index.html">Denda</a>
+                <a href="../laporan/peminjaman.html">Laporan</a>
+                <a href="../pengguna/index.html">Staf/Admin</a>
+            </nav>
+            <div class="admin-logout">
+                <a href="../../login.html">Keluar</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>Tambah Buku Baru</h1>
+                <p>Isi formulir berikut untuk menambahkan buku ke katalog perpustakaan.</p>
+            </header>
+
+            <section class="admin-form-section">
+                <form action="#" method="post" class="admin-form">
+                    <div class="form-group">
+                        <label for="judul">Judul Buku</label>
+                        <input type="text" id="judul" name="judul" placeholder="Masukkan judul buku" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="penulis">Penulis</label>
+                        <input type="text" id="penulis" name="penulis" placeholder="Masukkan nama penulis" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="penerbit">Penerbit</label>
+                        <input type="text" id="penerbit" name="penerbit" placeholder="Masukkan penerbit buku" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tahun">Tahun Terbit</label>
+                        <input type="number" id="tahun" name="tahun" min="1900" max="2025" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kategori">Kategori</label>
+                        <select id="kategori" name="kategori" required>
+                            <option value="">-- Pilih Kategori --</option>
+                            <option value="fiksi">Fiksi</option>
+                            <option value="non-fiksi">Non-Fiksi</option>
+                            <option value="pendidikan">Pendidikan</option>
+                            <option value="teknologi">Teknologi</option>
+                            <option value="agama">Agama</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="isbn">ISBN</label>
+                        <input type="text" id="isbn" name="isbn" placeholder="Masukkan nomor ISBN" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stok">Jumlah Stok</label>
+                        <input type="number" id="stok" name="stok" min="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deskripsi">Deskripsi</label>
+                        <textarea id="deskripsi" name="deskripsi" rows="4"
+                            placeholder="Tuliskan deskripsi buku..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cover">Upload Sampul Buku</label>
+                        <input type="file" id="cover" name="cover" accept="image/*">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Simpan</button>
+                        <a href="index.html" class="btn-secondary">Batal</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

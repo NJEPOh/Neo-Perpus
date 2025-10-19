@@ -1,0 +1,705 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f6f8fc;
+    color: #222;
+}
+
+/* CONTAINER */
+.admin-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* SIDEBAR */
+.admin-sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #1b2a49, #0f1b2d);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 20px;
+}
+
+.admin-logo {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.admin-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-nav a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.admin-nav a.active,
+.admin-nav a:hover {
+    background-color: #2d3f66;
+    color: #fff;
+}
+
+.admin-logout {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    text-align: center;
+}
+
+.admin-logout a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.admin-logout a:hover {
+    color: #fff;
+}
+
+/* MAIN AREA */
+.admin-main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* HEADER */
+.admin-dashboard-header {
+    margin-bottom: 30px;
+}
+
+.admin-dashboard-header h1 {
+    color: #1b2a49;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.admin-dashboard-header p {
+    color: #555;
+}
+
+/* STATS SECTION */
+.admin-dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.admin-dashboard-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.admin-dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.admin-dashboard-card h3 {
+    font-size: 16px;
+    color: #1b2a49;
+    margin-bottom: 8px;
+}
+
+.admin-dashboard-card p {
+    font-size: 22px;
+    font-weight: 600;
+    color: #263d63;
+}
+
+/* ACTIVITY TABLE */
+.admin-dashboard-activity {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.admin-dashboard-activity h2 {
+    margin-bottom: 18px;
+    color: #1b2a49;
+    font-size: 20px;
+}
+
+.admin-dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-dashboard-table th,
+.admin-dashboard-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+    font-size: 14px;
+}
+
+.admin-dashboard-table th {
+    background-color: #f1f4f9;
+    font-weight: 600;
+    color: #1b2a49;
+}
+
+.admin-dashboard-table tbody tr:hover {
+    background-color: #f9fbff;
+}
+
+/* STATUS BADGES */
+.admin-dashboard-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+}
+
+.admin-dashboard-status.success {
+    background-color: #d4edda;
+    color: #256029;
+}
+
+.admin-dashboard-status.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* SCROLLBAR */
+.admin-main::-webkit-scrollbar {
+    width: 8px;
+}
+
+.admin-main::-webkit-scrollbar-thumb {
+    background: #c7ccd6;
+    border-radius: 4px;
+}
+
+
+
+/* KATALOG ADMIN */
+/* KATALOG ADMIN PAGE */
+
+.admin-katalog-header {
+    margin-bottom: 25px;
+}
+
+.admin-katalog-header h1 {
+    color: #1b2a49;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.admin-katalog-header p {
+    color: #555;
+}
+
+/* ACTION BAR */
+.admin-katalog-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-katalog-search {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.admin-katalog-search input {
+    width: 280px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.admin-katalog-btn-search {
+    background-color: #1b2a49;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.admin-katalog-btn-search:hover {
+    background-color: #263d63;
+}
+
+.admin-katalog-btn-primary {
+    background-color: #263d63;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.admin-katalog-btn-primary:hover {
+    background-color: #1b2a49;
+}
+
+/* TABLE SECTION */
+.admin-katalog-list {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.admin-katalog-list h2 {
+    color: #1b2a49;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.admin-katalog-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.admin-katalog-table th,
+.admin-katalog-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.admin-katalog-table th {
+    background-color: #f1f4f9;
+    color: #1b2a49;
+    font-weight: 600;
+}
+
+.admin-katalog-table tr:hover {
+    background-color: #f9fbff;
+}
+
+/* BUTTONS */
+.admin-katalog-btn-edit,
+.admin-katalog-btn-delete {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-katalog-btn-edit {
+    background-color: #e0ecff;
+    color: #1b2a49;
+    border: 1px solid #b9d0ff;
+}
+
+.admin-katalog-btn-edit:hover {
+    background-color: #d1e2ff;
+}
+
+.admin-katalog-btn-delete {
+    background-color: #ffe0e0;
+    color: #b20000;
+    border: 1px solid #ffb8b8;
+}
+
+.admin-katalog-btn-delete:hover {
+    background-color: #ffcccc;
+}
+
+/* CREATE KATALOG */
+/* CONTAINER */
+.katalog-admin-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* SIDEBAR */
+.katalog-admin-sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #1b2a49, #0f1b2d);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 20px;
+}
+
+.katalog-admin-logo {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.katalog-admin-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.katalog-admin-nav a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.katalog-admin-nav a.active,
+.katalog-admin-nav a:hover {
+    background-color: #2d3f66;
+    color: #fff;
+}
+
+.katalog-admin-logout {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    text-align: center;
+}
+
+.katalog-admin-logout a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.katalog-admin-logout a:hover {
+    color: #fff;
+}
+
+/* MAIN AREA */
+.katalog-admin-main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* HEADER */
+.katalog-admin-header {
+    margin-bottom: 30px;
+}
+
+.katalog-admin-header h1 {
+    color: #1b2a49;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.katalog-admin-header p {
+    color: #555;
+}
+
+/* FORM SECTION */
+.katalog-admin-form-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    max-width: 700px;
+}
+
+.katalog-admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* FORM GROUP */
+.katalog-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.katalog-form-group label {
+    margin-bottom: 6px;
+    color: #1b2a49;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.katalog-form-group input,
+.katalog-form-group select {
+    padding: 10px 14px;
+    border: 1px solid #d0d4dc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.katalog-form-group input:focus,
+.katalog-form-group select:focus {
+    border-color: #2d3f66;
+    box-shadow: 0 0 0 3px rgba(45, 63, 102, 0.15);
+}
+
+/* BUTTONS */
+.katalog-form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.btn-katalog-primary {
+    background-color: #1b2a49;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-katalog-primary:hover {
+    background-color: #2d3f66;
+    transform: translateY(-1px);
+}
+
+.btn-katalog-secondary {
+    background-color: #e4e7ed;
+    color: #333;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-katalog-secondary:hover {
+    background-color: #d4dae2;
+}
+
+/* SCROLLBAR */
+.katalog-admin-main::-webkit-scrollbar {
+    width: 8px;
+}
+
+.katalog-admin-main::-webkit-scrollbar-thumb {
+    background: #c7ccd6;
+    border-radius: 4px;
+}
+
+/* EDIT KATALOG */
+/* CONTAINER */
+.editbuku-admin-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* SIDEBAR */
+.editbuku-admin-sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #1b2a49, #0f1b2d);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 20px;
+    flex-shrink: 0;
+}
+
+.editbuku-admin-logo {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.editbuku-admin-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.editbuku-admin-nav a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.editbuku-admin-nav a.active,
+.editbuku-admin-nav a:hover {
+    background-color: #2d3f66;
+    color: #fff;
+}
+
+.editbuku-admin-logout {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    text-align: center;
+}
+
+.editbuku-admin-logout a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.editbuku-admin-logout a:hover {
+    color: #fff;
+}
+
+/* MAIN AREA */
+.editbuku-admin-main {
+    flex: 1;
+    padding: 40px 50px;
+    overflow-y: auto;
+    background-color: #f6f8fc;
+}
+
+/* HEADER */
+.editbuku-admin-header {
+    margin-bottom: 30px;
+}
+
+.editbuku-admin-header h1 {
+    color: #1b2a49;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.editbuku-admin-header p {
+    color: #555;
+}
+
+/* FORM SECTION */
+.editbuku-admin-form-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    max-width: 700px;
+    margin-top: 10px;
+}
+
+.editbuku-admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* FORM GROUP */
+.editbuku-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.editbuku-form-group label {
+    margin-bottom: 6px;
+    color: #1b2a49;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.editbuku-form-group input,
+.editbuku-form-group select {
+    padding: 10px 14px;
+    border: 1px solid #d0d4dc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+    outline: none;
+    background-color: #fff;
+}
+
+.editbuku-form-group input:focus,
+.editbuku-form-group select:focus {
+    border-color: #2d3f66;
+    box-shadow: 0 0 0 3px rgba(45, 63, 102, 0.15);
+}
+
+/* BUTTONS */
+.editbuku-form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.btn-editbuku-primary {
+    background-color: #1b2a49;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-editbuku-primary:hover {
+    background-color: #2d3f66;
+    transform: translateY(-1px);
+}
+
+.btn-editbuku-secondary {
+    background-color: #e4e7ed;
+    color: #333;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-editbuku-secondary:hover {
+    background-color: #d4dae2;
+}
+
+/* SCROLLBAR */
+.editbuku-admin-main::-webkit-scrollbar {
+    width: 8px;
+}
+
+.editbuku-admin-main::-webkit-scrollbar-thumb {
+    background: #c7ccd6;
+    border-radius: 4px;
+}

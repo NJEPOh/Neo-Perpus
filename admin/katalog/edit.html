@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Buku - Admin</title>
+    <link rel="stylesheet" href="../../assets/css/admin-style.css">
+    <link rel="stylesheet" href="../../assets/css/edit-buku.css">
+</head>
+
+<body>
+    <div class="editbuku-admin-container">
+        <!-- Sidebar -->
+        <aside class="editbuku-admin-sidebar">
+            <h2 class="editbuku-admin-logo">Admin</h2>
+            <nav class="editbuku-admin-nav">
+                <a href="../dashboard.html">Dashboard</a>
+                <a href="index.html" class="active">Katalog Buku</a>
+                <a href="../anggota/index.html">Data Anggota</a>
+                <a href="../sirkulasi/index.html">Sirkulasi</a>
+                <a href="../denda/index.html">Denda</a>
+                <a href="../laporan/peminjaman.html">Laporan</a>
+                <a href="../pengguna/index.html">Staf/Admin</a>
+            </nav>
+            <div class="editbuku-admin-logout">
+                <a href="../../login.html">Keluar</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="editbuku-admin-main">
+            <header class="editbuku-admin-header">
+                <h1>Edit Data Buku</h1>
+                <p>Ubah informasi buku yang sudah ada di katalog perpustakaan.</p>
+            </header>
+
+            <section class="editbuku-admin-form-section">
+                <form class="editbuku-admin-form" id="formEditBuku">
+                    <div class="editbuku-form-group">
+                        <label for="editJudul">Judul Buku</label>
+                        <input type="text" id="editJudul" name="editJudul" value="Algoritma dan Pemrograman Dasar">
+                    </div>
+
+                    <div class="editbuku-form-group">
+                        <label for="editPengarang">Pengarang</label>
+                        <input type="text" id="editPengarang" name="editPengarang" value="Ahmad Ramadhan">
+                    </div>
+
+                    <div class="editbuku-form-group">
+                        <label for="editPenerbit">Penerbit</label>
+                        <input type="text" id="editPenerbit" name="editPenerbit" value="Penerbit Informatika">
+                    </div>
+
+                    <div class="editbuku-form-group">
+                        <label for="editTahun">Tahun Terbit</label>
+                        <input type="number" id="editTahun" name="editTahun" value="2022">
+                    </div>
+
+                    <div class="editbuku-form-group">
+                        <label for="editKategori">Kategori</label>
+                        <select id="editKategori" name="editKategori">
+                            <option disabled>Pilih kategori</option>
+                            <option selected>Teknologi</option>
+                            <option>Fiksi</option>
+                            <option>Sejarah</option>
+                            <option>Agama</option>
+                            <option>Bisnis</option>
+                        </select>
+                    </div>
+
+                    <div class="editbuku-form-group">
+                        <label for="editStok">Jumlah Stok</label>
+                        <input type="number" id="editStok" name="editStok" value="15">
+                    </div>
+
+                    <div class="editbuku-form-buttons">
+                        <button type="submit" class="btn-editbuku-primary">Perbarui Buku</button>
+                        <a href="index.html" class="btn-editbuku-secondary">Batal</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
