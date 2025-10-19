@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Buku - Admin Perpustakaan</title>
+    <link rel="stylesheet" href="../../assets/css/admin-style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin-katalog.css" />
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <h2 class="admin-logo">Admin</h2>
+            <nav class="admin-nav">
+                <a href="../dashboard.html">Dashboard</a>
+                <a href="index.html" class="active">Katalog Buku</a>
+                <a href="../anggota/index.html">Data Anggota</a>
+                <a href="../sirkulasi/index.html">Sirkulasi</a>
+                <a href="../denda/index.html">Denda</a>
+                <a href="../laporan/peminjaman.html">Laporan</a>
+                <a href="../pengguna/index.html">Staf/Admin</a>
+            </nav>
+            <div class="admin-logout">
+                <a href="../../login.html">Keluar</a>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="admin-main">
+            <header class="admin-katalog-header">
+                <h1>Katalog Buku</h1>
+                <p>Kelola data koleksi buku perpustakaan</p>
+            </header>
+
+            <section class="admin-katalog-actions">
+                <div class="admin-katalog-search">
+                    <input type="text" placeholder="Cari judul, pengarang, atau ISBN..." />
+                    <button class="admin-katalog-btn-search">Cari</button>
+                </div>
+                <a href="create.html" class="admin-katalog-btn-primary">+ Tambah Buku</a>
+            </section>
+
+            <section class="admin-katalog-list">
+                <h2>Daftar Buku</h2>
+                <table class="admin-katalog-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Judul Buku</th>
+                            <th>Pengarang</th>
+                            <th>Penerbit</th>
+                            <th>Tahun</th>
+                            <th>Kategori</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Laskar Pelangi</td>
+                            <td>Andrea Hirata</td>
+                            <td>Bentang Pustaka</td>
+                            <td>2005</td>
+                            <td>Novel</td>
+                            <td>
+                                <a href="edit.html" class="admin-katalog-btn-edit">Edit</a>
+                                <button class="admin-katalog-btn-delete">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Bumi Manusia</td>
+                            <td>Pramoedya A. Toer</td>
+                            <td>Lentera Dipantara</td>
+                            <td>1980</td>
+                            <td>Sastra</td>
+                            <td>
+                                <a href="edit.html" class="admin-katalog-btn-edit">Edit</a>
+                                <button class="admin-katalog-btn-delete">Hapus</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

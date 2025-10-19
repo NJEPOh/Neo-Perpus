@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Buku - Admin</title>
+    <link rel="stylesheet" href="../../assets/css/admin-style.css">
+</head>
+
+<body>
+    <div class="katalog-admin-container">
+        <!-- Sidebar -->
+        <aside class="katalog-admin-sidebar">
+            <h2 class="katalog-admin-logo">Admin</h2>
+            <nav class="katalog-admin-nav">
+                <a href="../dashboard.html">Dashboard</a>
+                <a href="index.html" class="active">Katalog Buku</a>
+                <a href="../anggota/index.html">Data Anggota</a>
+                <a href="../sirkulasi/index.html">Sirkulasi</a>
+                <a href="../denda/index.html">Denda</a>
+                <a href="../laporan/peminjaman.html">Laporan</a>
+                <a href="../pengguna/index.html">Staf/Admin</a>
+            </nav>
+            <div class="katalog-admin-logout">
+                <a href="../../login.html">Keluar</a>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="katalog-admin-main">
+            <header class="katalog-admin-header">
+                <h1>Tambah Buku Baru</h1>
+                <p>Masukkan informasi buku baru ke dalam katalog perpustakaan.</p>
+            </header>
+
+            <section class="katalog-admin-form-section">
+                <form class="katalog-admin-form" id="formTambahBuku">
+                    <div class="katalog-form-group">
+                        <label for="judulBuku">Judul Buku</label>
+                        <input type="text" id="judulBuku" name="judulBuku" placeholder="Masukkan judul buku">
+                    </div>
+
+                    <div class="katalog-form-group">
+                        <label for="pengarangBuku">Pengarang</label>
+                        <input type="text" id="pengarangBuku" name="pengarangBuku"
+                            placeholder="Masukkan nama pengarang">
+                    </div>
+
+                    <div class="katalog-form-group">
+                        <label for="penerbitBuku">Penerbit</label>
+                        <input type="text" id="penerbitBuku" name="penerbitBuku" placeholder="Masukkan nama penerbit">
+                    </div>
+
+                    <div class="katalog-form-group">
+                        <label for="tahunTerbit">Tahun Terbit</label>
+                        <input type="number" id="tahunTerbit" name="tahunTerbit" placeholder="Masukkan tahun terbit">
+                    </div>
+
+                    <div class="katalog-form-group">
+                        <label for="kategoriBuku">Kategori</label>
+                        <select id="kategoriBuku" name="kategoriBuku">
+                            <option disabled selected>Pilih kategori</option>
+                            <option>Teknologi</option>
+                            <option>Fiksi</option>
+                            <option>Sejarah</option>
+                            <option>Agama</option>
+                            <option>Bisnis</option>
+                        </select>
+                    </div>
+
+                    <div class="katalog-form-group">
+                        <label for="stokBuku">Jumlah Stok</label>
+                        <input type="number" id="stokBuku" name="stokBuku" placeholder="Masukkan jumlah stok buku">
+                    </div>
+
+                    <div class="katalog-form-buttons">
+                        <button type="submit" class="btn-katalog-primary">Simpan Buku</button>
+                        <a href="index.html" class="btn-katalog-secondary">Batal</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Perpustakaan</title>
+    <link rel="stylesheet" href="../assets/css/admin-style.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <h2 class="admin-logo">Admin</h2>
+            <nav class="admin-nav">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="katalog/index.html">Katalog Buku</a>
+                <a href="anggota/index.html">Data Anggota</a>
+                <a href="sirkulasi/index.html">Sirkulasi</a>
+                <a href="denda/index.html">Denda</a>
+                <a href="laporan/peminjaman.html">Laporan</a>
+                <a href="pengguna/index.html">Staf/Admin</a>
+            </nav>
+            <div class="admin-logout">
+                <a href="../login.html">Keluar</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-dashboard-header">
+                <h1>Dashboard Admin</h1>
+                <p>Selamat datang, <strong>Admin</strong></p>
+            </header>
+
+            <section class="admin-dashboard-stats">
+                <div class="admin-dashboard-card">
+                    <h3>Total Buku</h3>
+                    <p>1.245</p>
+                </div>
+                <div class="admin-dashboard-card">
+                    <h3>Anggota</h3>
+                    <p>534</p>
+                </div>
+                <div class="admin-dashboard-card">
+                    <h3>Dipinjam</h3>
+                    <p>238</p>
+                </div>
+                <div class="admin-dashboard-card">
+                    <h3>Denda Aktif</h3>
+                    <p>Rp 157.000</p>
+                </div>
+            </section>
+
+            <section class="admin-dashboard-activity">
+                <h2>Aktivitas Terbaru</h2>
+                <table class="admin-dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Nama Anggota</th>
+                            <th>Kegiatan</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>16 Okt 2025</td>
+                            <td>Rina Saputri</td>
+                            <td>Peminjaman Buku</td>
+                            <td><span class="admin-dashboard-status success">Berhasil</span></td>
+                        </tr>
+                        <tr>
+                            <td>15 Okt 2025</td>
+                            <td>Ahmad F.</td>
+                            <td>Perpanjangan Buku</td>
+                            <td><span class="admin-dashboard-status warning">Menunggu</span></td>
+                        </tr>
+                        <tr>
+                            <td>14 Okt 2025</td>
+                            <td>Desi Kurnia</td>
+                            <td>Pengembalian Buku</td>
+                            <td><span class="admin-dashboard-status success">Berhasil</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

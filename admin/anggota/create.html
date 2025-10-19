@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tambah Anggota - Admin</title>
+    <link rel="stylesheet" href="../../assets/css/admin-style.css" />
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <h2 class="admin-logo">Admin</h2>
+            <nav class="admin-nav">
+                <a href="../dashboard.html">Dashboard</a>
+                <a href="../katalog/index.html">Katalog Buku</a>
+                <a href="../anggota/index.html" class="active">Data Anggota</a>
+                <a href="../sirkulasi/index.html">Sirkulasi</a>
+                <a href="../denda/index.html">Denda</a>
+                <a href="../laporan/peminjaman.html">Laporan</a>
+                <a href="../pengguna/index.html">Staf/Admin</a>
+            </nav>
+            <div class="admin-logout">
+                <a href="../../login.html">Keluar</a>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>Tambah Anggota</h1>
+                <p>Tambahkan data anggota baru ke sistem perpustakaan.</p>
+            </header>
+
+            <section class="admin-form-section">
+                <form class="admin-form" action="#" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nomor">Nomor Anggota</label>
+                        <input type="text" id="nomor" name="nomor" placeholder="Contoh: AGT001" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kategori">Kategori</label>
+                        <select id="kategori" name="kategori" required>
+                            <option value="">-- Pilih Kategori --</option>
+                            <option value="mahasiswa">Mahasiswa</option>
+                            <option value="dosen">Dosen</option>
+                            <option value="umum">Umum</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telepon">Nomor Telepon</label>
+                        <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alamat">Alamat</label>
+                        <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status Keanggotaan</label>
+                        <select id="status" name="status" required>
+                            <option value="aktif">Aktif</option>
+                            <option value="nonaktif">Nonaktif</option>
+                            <option value="diblokir">Diblokir</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avatar">Foto Anggota (opsional)</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/*">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Simpan Anggota</button>
+                        <a href="index.html" class="btn-secondary">Batal</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

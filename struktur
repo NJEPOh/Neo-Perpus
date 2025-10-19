@@ -1,0 +1,59 @@
+/perpustakaan/
+│
+├── index.html                 # Halaman beranda
+├── katalog.html               # Pencarian katalog (OPAC)
+├── detail-buku.html           # Detail buku
+├── daftar.html                # Form pendaftaran anggota
+├── login.html                 # Halaman login anggota
+├── tentang.html               # Tentang kami
+├── bantuan.html               # FAQ / Bantuan
+├── kontak.html                # Hubungi kami
+│
+├── anggota/                   # Area pengguna yang sudah login
+│   ├── dashboard.html          # Profil pengguna
+│   ├── riwayat.html            # Riwayat peminjaman
+│   ├── keranjang.html          # Keranjang / booking buku
+│   ├── perpanjangan.html       # Perpanjangan mandiri
+│   └── pengaturan.html         # Pengaturan akun
+│
+├── admin/                     # Area admin/pustakawan
+│   ├── dashboard.html          # Dashboard admin
+│   ├── sirkulasi/              # Manajemen peminjaman & pengembalian
+│   │   ├── index.html          # Daftar peminjaman
+│   │   ├── create.html         # Form peminjaman baru
+│   │   └── edit.html           # Update data peminjaman
+│   │
+│   ├── katalog/                # CRUD data buku
+│   │   ├── index.html
+│   │   ├── create.html
+│   │   └── edit.html
+│   │
+│   ├── anggota/                # CRUD anggota
+│   │   ├── index.html
+│   │   ├── create.html
+│   │   └── edit.html
+│   │
+│   ├── denda/                  # Manajemen denda
+│   │   ├── index.html
+│   │   └── laporan.html
+│   │
+│   ├── laporan/                # Laporan umum (PDF / Excel)
+│   │   ├── peminjaman.html
+│   │   ├── pengembalian.html
+│   │   └── keuangan.html
+│   │
+│   └── pengguna/               # CRUD staf/admin
+│       ├── index.html
+│       ├── create.html
+│       └── edit.html
+│
+├── assets/                    # Gambar, CSS, JS, ikon
+│   ├── css/
+│   ├── js/
+│   └── img/
+│
+└── backend/                   # Folder API (jika pakai backend terpisah)
+    ├── controllers/
+    ├── models/
+    ├── routes/
+    └── database/

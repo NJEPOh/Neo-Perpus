@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Detail Peminjaman - Admin</title>
+    <link rel="stylesheet" href="../../assets/css/admin-style.css" />
+</head>
+
+<body>
+    <div class="sirkulasi-detail-container">
+        <!-- Sidebar -->
+        <aside class="sirkulasi-detail-sidebar">
+            <h2 class="sirkulasi-detail-logo">Admin</h2>
+            <nav class="sirkulasi-detail-nav">
+                <a href="../dashboard.html">Dashboard</a>
+                <a href="../katalog/index.html">Katalog Buku</a>
+                <a href="../anggota/index.html">Data Anggota</a>
+                <a href="index.html" class="active">Sirkulasi</a>
+                <a href="../denda/index.html">Denda</a>
+                <a href="../laporan/peminjaman.html">Laporan</a>
+                <a href="../pengguna/index.html">Staf/Admin</a>
+            </nav>
+            <div class="sirkulasi-detail-logout">
+                <a href="../../login.html">Keluar</a>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="sirkulasi-detail-main">
+            <header class="sirkulasi-detail-header">
+                <h1>Detail Peminjaman</h1>
+                <p>Informasi lengkap peminjaman buku.</p>
+            </header>
+
+            <section class="sirkulasi-detail-card">
+                <div class="sirkulasi-detail-row">
+                    <span class="sirkulasi-detail-label">Nama Anggota:</span>
+                    <span class="sirkulasi-detail-value">Rina Saputri</span>
+                </div>
+
+                <div class="sirkulasi-detail-row">
+                    <span class="sirkulasi-detail-label">Judul Buku:</span>
+                    <span class="sirkulasi-detail-value">Belajar Python untuk Pemula</span>
+                </div>
+
+                <div class="sirkulasi-detail-row">
+                    <span class="sirkulasi-detail-label">Tanggal Pinjam:</span>
+                    <span class="sirkulasi-detail-value">12 Oktober 2025</span>
+                </div>
+
+                <div class="sirkulasi-detail-row">
+                    <span class="sirkulasi-detail-label">Tanggal Kembali:</span>
+                    <span class="sirkulasi-detail-value">19 Oktober 2025</span>
+                </div>
+
+                <div class="sirkulasi-detail-row">
+                    <span class="sirkulasi-detail-label">Status:</span>
+                    <span class="sirkulasi-detail-status dipinjam">Dipinjam</span>
+                </div>
+
+                <div class="sirkulasi-detail-actions">
+                    <a href="index.html" class="sirkulasi-detail-btn-back">Kembali</a>
+                    <a href="edit.html" class="sirkulasi-detail-btn-edit">Edit</a>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
