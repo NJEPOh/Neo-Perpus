@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keranjang Buku - Anggota</title>
+  <link rel="stylesheet" href="../../assets/css/anggota-keranjang.css">
+</head>
+
+<body>
+  <div class="anggota-container">
+    <!-- Sidebar -->
+    <aside class="anggota-sidebar">
+      <h2 class="anggota-logo">Perpustakaan</h2>
+      <nav class="anggota-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="katalog.html">Katalog Buku</a>
+        <a href="pinjaman.html">Peminjaman Saya</a>
+        <a href="riwayat.html">Riwayat</a>
+        <a href="keranjang.html" class="active">Keranjang</a>
+        <a href="profil.html">Profil</a>
+      </nav>
+      <div class="anggota-logout">
+        <a href="../../login.html">Keluar</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="anggota-main">
+      <header class="anggota-header">
+        <h1>Keranjang Peminjaman</h1>
+        <p>Berikut daftar buku yang akan Anda pinjam dari perpustakaan.</p>
+      </header>
+
+      <section class="anggota-table-section">
+        <table class="anggota-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Judul Buku</th>
+              <th>Pengarang</th>
+              <th>Tahun</th>
+              <th>Kategori</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Algoritma dan Pemrograman Dasar</td>
+              <td>Ahmad Ramadhan</td>
+              <td>2022</td>
+              <td>Teknologi</td>
+              <td><a href="#" class="btn-hapus">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Manajemen Waktu Efektif</td>
+              <td>Dewi Anggraini</td>
+              <td>2021</td>
+              <td>Bisnis</td>
+              <td><a href="#" class="btn-hapus">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Psikologi Kepribadian</td>
+              <td>Rizky Nurhaliza</td>
+              <td>2023</td>
+              <td>Pendidikan</td>
+              <td><a href="#" class="btn-hapus">Hapus</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Tombol Aksi -->
+      <div class="keranjang-actions">
+        <a href="katalog.html" class="btn-secondary">← Kembali ke Katalog</a>
+        <a href="pinjaman.html" class="btn-primary">Ajukan Peminjaman</a>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perpanjangan Peminjaman - Anggota</title>
+  <link rel="stylesheet" href="../../assets/css/anggota-perpanjangan.css">
+</head>
+
+<body>
+  <div class="anggota-container">
+    <!-- Sidebar -->
+    <aside class="anggota-sidebar">
+      <h2 class="anggota-logo">Perpustakaan</h2>
+      <nav class="anggota-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="katalog.html">Katalog Buku</a>
+        <a href="pinjaman.html">Peminjaman Saya</a>
+        <a href="riwayat.html">Riwayat</a>
+        <a href="keranjang.html">Keranjang</a>
+        <a href="perpanjangan.html" class="active">Perpanjangan</a>
+        <a href="pengaturan.html">Pengaturan</a>
+      </nav>
+      <div class="anggota-logout">
+        <a href="../../login.html">Keluar</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="anggota-main">
+      <header class="anggota-header">
+        <h1>Perpanjangan Peminjaman</h1>
+        <p>Ajukan perpanjangan waktu peminjaman buku dengan mudah.</p>
+      </header>
+
+      <!-- Tombol Ajukan -->
+      <div class="anggota-toolbar">
+        <button id="openModal" class="btn-primary">+ Ajukan Perpanjangan</button>
+      </div>
+
+      <!-- Tabel Perpanjangan -->
+      <section class="anggota-table-section">
+        <table class="anggota-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Judul Buku</th>
+              <th>Tanggal Pinjam</th>
+              <th>Tanggal Jatuh Tempo</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Algoritma dan Pemrograman Dasar</td>
+              <td>2025-10-01</td>
+              <td>2025-10-15</td>
+              <td><span class="status pending">Menunggu Persetujuan</span></td>
+              <td><a href="#" class="btn-table cancel">Batalkan</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Dasar-Dasar Jaringan Komputer</td>
+              <td>2025-09-20</td>
+              <td>2025-10-04</td>
+              <td><span class="status success">Disetujui</span></td>
+              <td><span class="text-muted">Selesai</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Pemrograman Web Lanjutan</td>
+              <td>2025-10-05</td>
+              <td>2025-10-19</td>
+              <td><span class="status danger">Ditolak</span></td>
+              <td><a href="#" class="btn-table retry">Ajukan Ulang</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal Form -->
+  <div id="modalPerpanjangan" class="modal">
+    <div class="modal-content">
+      <h2>Ajukan Perpanjangan</h2>
+      <form class="form-perpanjangan">
+        <div class="form-group">
+          <label for="judul">Judul Buku</label>
+          <input type="text" id="judul" placeholder="Masukkan judul buku" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tanggal-pinjam">Tanggal Pinjam</label>
+          <input type="date" id="tanggal-pinjam" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tanggal-baru">Tanggal Jatuh Tempo Baru</label>
+          <input type="date" id="tanggal-baru" required>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn-primary">Kirim Permintaan</button>
+          <button type="button" id="closeModal" class="btn-secondary">Batal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("modalPerpanjangan");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.getElementById("closeModal");
+
+    openModal.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+
+</html>

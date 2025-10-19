@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Anggota</title>
+  <link rel="stylesheet" href="../../assets/css/anggota-dashboard.css">
+</head>
+
+<body>
+  <div class="anggota-container">
+    <!-- Sidebar -->
+    <aside class="anggota-sidebar">
+      <h2 class="anggota-logo">Perpustakaan</h2>
+      <nav class="anggota-nav">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="katalog.html">Katalog Buku</a>
+        <a href="pinjaman.html">Peminjaman Saya</a>
+        <a href="riwayat.html">Riwayat</a>
+        <a href="profil.html">Profil</a>
+      </nav>
+      <div class="anggota-logout">
+        <a href="../../login.html">Keluar</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="anggota-main">
+      <header class="anggota-header">
+        <h1>Selamat Datang, Rina Saputri 👋</h1>
+        <p>Berikut ringkasan aktivitas akun perpustakaan Anda.</p>
+      </header>
+
+      <!-- Statistik -->
+      <section class="anggota-stats">
+        <div class="stat-card blue">
+          <h3>Buku Dipinjam</h3>
+          <p>3</p>
+        </div>
+        <div class="stat-card green">
+          <h3>Buku Dikembalikan</h3>
+          <p>15</p>
+        </div>
+        <div class="stat-card orange">
+          <h3>Denda Aktif</h3>
+          <p>Rp 5.000</p>
+        </div>
+      </section>
+
+      <!-- Tabel Peminjaman Terbaru -->
+      <section class="anggota-table-section">
+        <h2>Peminjaman Terbaru</h2>
+        <table class="anggota-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Judul Buku</th>
+              <th>Tanggal Pinjam</th>
+              <th>Tanggal Kembali</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Algoritma dan Pemrograman</td>
+              <td>2025-10-10</td>
+              <td>2025-10-17</td>
+              <td><span class="status warning">Dipinjam</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Manajemen Waktu Efektif</td>
+              <td>2025-09-25</td>
+              <td>2025-10-02</td>
+              <td><span class="status success">Dikembalikan</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Sejarah Nusantara</td>
+              <td>2025-08-15</td>
+              <td>2025-08-22</td>
+              <td><span class="status success">Dikembalikan</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

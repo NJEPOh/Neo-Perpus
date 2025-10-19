@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat Peminjaman - Anggota</title>
+  <link rel="stylesheet" href="../../assets/css/anggota-riwayat.css">
+</head>
+
+<body>
+  <div class="anggota-container">
+    <!-- Sidebar -->
+    <aside class="anggota-sidebar">
+      <h2 class="anggota-logo">Perpustakaan</h2>
+      <nav class="anggota-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="katalog.html">Katalog Buku</a>
+        <a href="pinjaman.html">Peminjaman Saya</a>
+        <a href="riwayat.html" class="active">Riwayat</a>
+        <a href="keranjang.html">Keranjang</a>
+        <a href="perpanjangan.html">Perpanjangan</a>
+        <a href="pengaturan.html">Pengaturan</a>
+      </nav>
+      <div class="anggota-logout">
+        <a href="../../login.html">Keluar</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="anggota-main">
+      <header class="anggota-header">
+        <h1>Riwayat Peminjaman</h1>
+        <p>Lihat catatan lengkap peminjaman dan pengembalian buku Anda.</p>
+      </header>
+
+      <!-- Filter -->
+      <div class="anggota-toolbar">
+        <label for="filter" class="filter-label">Tampilkan:</label>
+        <select id="filter" class="filter-select">
+          <option value="all">Semua</option>
+          <option value="returned">Sudah Dikembalikan</option>
+          <option value="late">Terlambat</option>
+        </select>
+      </div>
+
+      <!-- Table Riwayat -->
+      <section class="anggota-table-section">
+        <table class="anggota-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Judul Buku</th>
+              <th>Tanggal Pinjam</th>
+              <th>Tanggal Kembali</th>
+              <th>Status</th>
+              <th>Denda</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Algoritma dan Pemrograman Dasar</td>
+              <td>2025-09-01</td>
+              <td>2025-09-14</td>
+              <td><span class="status success">Dikembalikan</span></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Struktur Data Lanjutan</td>
+              <td>2025-09-15</td>
+              <td>2025-10-03</td>
+              <td><span class="status warning">Terlambat</span></td>
+              <td>Rp 10.000</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Pemrograman Web Modern</td>
+              <td>2025-10-05</td>
+              <td>-</td>
+              <td><span class="status pending">Masih Dipinjam</span></td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
