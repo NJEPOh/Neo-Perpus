@@ -1,0 +1,306 @@
+/* =========================================================
+   CSS UTAMA ANGGOTA PERPUSTAKAAN
+   ========================================================= */
+
+/* RESET & DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f6f8fc;
+  color: #2f3640;
+}
+
+/* =========================================================
+   LAYOUT UMUM
+   ========================================================= */
+.anggota-container {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+.anggota-sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #273c75, #192a56);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 20px;
+}
+
+.anggota-logo {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.anggota-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.anggota-nav a {
+  color: #dcdde1;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.anggota-nav a.active,
+.anggota-nav a:hover {
+  background-color: #40739e;
+  color: #fff;
+}
+
+.anggota-logout {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 15px;
+  text-align: center;
+}
+
+.anggota-logout a {
+  color: #f5f6fa;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.anggota-logout a:hover {
+  color: #e84118;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+.anggota-main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.anggota-header {
+  margin-bottom: 30px;
+}
+
+.anggota-header h1 {
+  font-size: 26px;
+  color: #273c75;
+  margin-bottom: 6px;
+}
+
+.anggota-header p {
+  color: #555;
+}
+
+/* =========================================================
+   DASHBOARD / KARTU INFORMASI
+   ========================================================= */
+.anggota-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.anggota-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.anggota-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.anggota-card h3 {
+  color: #273c75;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.anggota-card p {
+  font-size: 22px;
+  font-weight: 600;
+  color: #192a56;
+}
+
+/* =========================================================
+   TABEL DATA (untuk Riwayat, Pinjaman, dll)
+   ========================================================= */
+.anggota-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.anggota-table th,
+.anggota-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.anggota-table th {
+  background-color: #f1f4f9;
+  font-weight: 600;
+  color: #273c75;
+}
+
+.anggota-table tbody tr:hover {
+  background-color: #f9fbff;
+}
+
+/* STATUS */
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status.success {
+  background-color: #d4edda;
+  color: #256029;
+}
+
+.status.warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.danger {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+/* =========================================================
+   FORM (untuk Pengaturan, Perpanjangan, dll)
+   ========================================================= */
+.anggota-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #273c75;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #40739e;
+  outline: none;
+}
+
+/* =========================================================
+   TOMBOL
+   ========================================================= */
+.btn-primary {
+  background-color: #273c75;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #40739e;
+}
+
+.btn-secondary {
+  background-color: #dcdde1;
+  color: #273c75;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #b2bec3;
+  color: #192a56;
+}
+
+.btn-table {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.btn-table.edit {
+  background-color: #44bd32;
+}
+
+.btn-table.delete {
+  background-color: #e84118;
+}
+
+.btn-table.edit:hover {
+  background-color: #4cd137;
+}
+
+.btn-table.delete:hover {
+  background-color: #c23616;
+}
+
+/* =========================================================
+   SCROLLBAR (hiasan)
+   ========================================================= */
+.anggota-main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.anggota-main::-webkit-scrollbar-thumb {
+  background: #c7ccd6;
+  border-radius: 4px;
+}
